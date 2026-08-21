@@ -1,0 +1,241 @@
+    /* Fichier : style.css
+    Auteur : D.WDF
+    Description : PressKit style
+    Dernière mise à jour : 10 mai 2025
+    */
+    
+html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #000000;
+      color: #e0e0e0;
+      font-family: 'Helvetica Neue', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: left;
+      background-color: rgba(0,0,0,1);
+      z-index: -2;
+    }
+
+    /* .container {
+      z-index: 10;
+      max-width: 70rem;
+      padding: 0rem 20rem;
+    } */
+    .container {
+  position: relative;
+  z-index: 10;
+
+  width: 90%;
+  max-width: 77rem;
+
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+
+
+    .bbox {
+      padding: 3rem 1rem;
+      backdrop-filter: blur(1rem);
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+    }
+
+    h2 {
+      font-size: 5.7rem;
+      margin-bottom: 1.5rem;
+    }
+    h3 {
+      font-size: 4.7rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.7rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    body, html {
+      margin: 0;
+      height: auto;
+      overflow-x: hidden;
+    }
+    .full-width-image {
+
+        position: absolute;
+        height: 100vh;
+        right: 0;
+        z-index: 5;
+    }
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* On conserve ton image exactement dans son ratio */
+.hero > img {
+display: block;
+  display: block;
+
+  height: clamp(160px, 30vh, 500px);
+  width: auto;
+
+  max-width: 90%;
+  object-fit: contain;
+
+  margin: 0 auto;
+}
+
+    .links {
+      position: absolute;
+      bottom: 6rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3vw;
+    }
+
+
+
+    .links {
+      position: absolute;
+      bottom: 6rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3vw;
+      /* gap: 4rem; */
+      /* gap: calc() */
+    }
+
+    .links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.6;
+      transition: opacity 1s ease;
+
+    }
+    .links a:hover {
+      opacity: 1;
+    }
+
+    svg {
+      filter: brightness(0) invert(1);
+      transition: transform 2s ease;
+    }
+    .links a:hover svg {
+      transform: scale(1.2);
+    }
+
+    /* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+/* Écrans moyens */
+@media (max-width: 1100px) {
+
+  .container {
+    width: 90%;
+    padding: 0;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  /* .hero > img {
+    width: 100%;
+    height: auto;
+  } */
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 3.5rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+}
+
+
+/* Tablette / petit écran */
+@media (max-width: 700px) {
+
+
+  /* .hero > img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  } */
+
+  h2 {
+    font-size: 2.8rem;
+    line-height: 1;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+    line-height: 1;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+}
+
+
+/* Très petit téléphone */
+@media (max-width: 430px) {
+
+  .links {
+    bottom: 2rem;
+    gap: .5rem;
+  }
+
+  .links svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  h2 {
+    font-size: 2.3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+}
